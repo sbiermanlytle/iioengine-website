@@ -1,38 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import iio from 'iioengine'
-import './App.css'
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import CounterButton from "./components/CounterButton";
+// import iio from "iioengine";
+import "./App.css";
 
 function App() {
-  const value = import.meta.env.VITE_VISIBLE_VAR
-  const [count, setCount] = useState(0)
-  iio.printMsg()
+  const value = import.meta.env.VITE_VISIBLE_VAR;
+  // iio.printMsg();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React + {value}</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container maxWidth="sm">
+      <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
+          Material UI Vite.js example in TypeScript: {value}
+        </Typography>
+        <CounterButton title={"press me"} />
+      </Box>
+    </Container>
+  );
 }
 
-export default App
+export default App;
