@@ -19,7 +19,7 @@ h5,
 #root {
   margin: 0;
   padding: 0;
-  font-family: "Century Gothic", verdana, arial, helvetica, sans-serif;
+  font-family: Agency, verdana, arial, helvetica, sans-serif;
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,4 +30,11 @@ h5,
   color-scheme: light dark;
   background-color: #242424;
   color: rgba(255, 255, 255, 0.87);
+}
+
+@font-face {
+  font-family: "Agency FB";
+  src: url("./fonts/AgencyFB.woff") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

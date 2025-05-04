@@ -6,6 +6,7 @@ import CounterButton from "./components/CounterButton";
 import "./App.css";
 import { BackgroundColor } from "./components/BackgroundColor";
 import { bgDark } from "./constants/colors";
+import IioIcon from "./components/IioIcon";
 
 function App() {
   const value = import.meta.env.VITE_VISIBLE_VAR;
@@ -15,9 +16,10 @@ function App() {
     <>
       <BackgroundColor color={bgDark} />
       <Container maxWidth="sm">
-        <Box sx={{ my: 4 }}>
+        <Box sx={{ my: 3 }}>
+          <IioIcon />
           <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-            Material UI Vite.js example in TypeScript: {value}
+            iio Engine: {value}
           </Typography>
           <CounterButton title={"press me"} />
         </Box>
