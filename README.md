@@ -20,11 +20,9 @@
  ```
  yarn vite preview
  ```
+
+ ### VScode Setup
  
- To create a new Vite project with Material UI
- ```
- yarn create vite project-name --template react-swc-ts
- 
- cd project-name
- yarn add @mui/material @emotion/react @emotion/styled @mui/icons-material
- ```
+ Install the following extensions in VSCode:
+ - ESLint
+ - Prettier Java
