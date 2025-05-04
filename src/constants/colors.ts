@@ -1,0 +1,1 @@
+export const bgDark = "#242424"
