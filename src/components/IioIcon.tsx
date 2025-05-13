@@ -10,15 +10,31 @@ const IioIcon = ({ title }: IioIconProps) => {
     <Box
       sx={{
         backgroundColor: iioBlue,
-        width: "60px",
-        height: "60px",
+        width: "104px",
+        height: "108px",
         lineHeight: 0,
         textAlign: "center",
+        cursor: "pointer",
+        transition: "background-color 0.3s ease",
+        "&:hover": {
+          backgroundColor: "#fff",
+          "& .iio-text": {
+            color: iioBlue,
+            borderTop: `1px solid ${iioBlue}`,
+          },
+        },
       }}
     >
       <Typography
+        className="iio-text"
         sx={{
-          fontSize: "40px",
+          borderTop: "1px solid #fff",
+          marginTop: "0px",
+          fontSize: "82px",
+          color: "#fff",
+          transition: "color 0.3s ease",
+          lineHeight: 1,
+          paddingTop: "14px",
         }}
       >
         iio
