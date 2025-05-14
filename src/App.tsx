@@ -13,15 +13,6 @@ import { useState } from "react";
 
 function App() {
   const value = import.meta.env.VITE_VISIBLE_VAR;
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
   return (
     <>
@@ -30,16 +21,13 @@ function App() {
       <ColorBar position="bottom" />
       <Container maxWidth="sm">
         <Box sx={{ m: "-19px", p: 0, position: "fixed", zIndex: 1001 }}>
-          <div onClick={handleClick}>
-            <IioIcon title="Menu" />
-          </div>
+          <IioIcon title="Menu" />
           <Box>
             <MenuLink label="API" />
             <MenuLink label="Demos" />
             <MenuLink label="Tutorials" />
             <MenuLink label="Github" />
           </Box>
-          <Menu anchorEl={anchorEl} onClose={handleClose} />
         </Box>
         <Box sx={{ marginLeft: "120px" }}>
           <Typography variant="h4" component="h1" sx={{ mt: 3, mb: 2 }}>
