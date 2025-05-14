@@ -3,13 +3,15 @@ import { iioBlue } from "~/constants/colors";
 
 interface MenuLinkProps {
   label: string;
+  onClick?: () => void;
 }
 
-const MenuLink = ({ label }: MenuLinkProps) => {
+const MenuLink = ({ label, onClick }: MenuLinkProps) => {
   return (
     <Box sx={{}}>
       <Typography
         component="p"
+        onClick={onClick}
         sx={{
           fontSize: "26px",
           fontWeight: "bold",
