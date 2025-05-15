@@ -1,14 +1,14 @@
 import Typography from "@mui/material/Typography";
 import BasePage from "~/components/BasePage";
 import DemoCanvas from "~/components/DemoCanvas";
-import iio from "iioengine";
+import { add } from "iioengine";
 
 const HomePage = () => {
-  iio.printMsg();
+  const result = add(4, 20);
   return (
     <BasePage>
       <Typography variant="h4" component="h1" sx={{ mt: 3, mb: 2 }}>
-        HomePage
+        HomePage - RESULTS: {result}
       </Typography>
       <DemoCanvas width={100} height={100} />
     </BasePage>
