@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import IioIcon from "./IioIcon";
+import IioIcon from "../IioIcon";
 import MenuLink from "./MenuLink";
 import { useNavigate } from "react-router-dom";
 
