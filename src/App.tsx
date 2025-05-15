@@ -1,8 +1,9 @@
 import "./App.css";
 import AppRoutes from "./AppRoutes";
-import { BackgroundColor } from "./components/BackgroundColor";
+import { BackgroundColor } from "./components/styles/BackgroundColor";
 import { bgBlack } from "./constants/colors";
 import ApiPage from "./pages/ApiPage";
+import DemoPage from "./pages/DemoPage";
 import HomePage from "./pages/HomePage";
 import BaseThemeProvider from "./themes/BaseTheme";
 import { AppRoute } from "./types";
@@ -20,6 +21,11 @@ const APP_ROUTES: Record<string, AppRoute> = {
     label: "Api",
     element: <ApiPage />,
     // icon: <DashboardIcon color="primary" />,
+  },
+  demos: {
+    path: "/demos",
+    label: "Demos",
+    element: <DemoPage />,
   },
 };
 
